@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Movie Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <header>
+        <div class="container mx-auto p-4 flex flex-col md:flex-row items-center justify-between">
+            <!-- Logo and Hamburger Menu Button -->
+            <div class="flex items-center w-full md:w-auto">
+                <h1 class="text-3xl font-bold mb-4 md:mb-0 flex-1">Cinematic Films</h1>
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white md:hidden" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Navbar Links -->
+            <nav id="navbar-default" class="hidden md:flex md:items-center md:space-x-4">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                    <li><a href="#" class="text-blue-400 hover:underline">Home</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">Movies</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">French Movies</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">Marvel Movies</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">Hindi Dubbed</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">New Releases</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">Privacy Policy</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 md:hidden hidden">
+                <div class="flex flex-col items-center justify-center min-h-screen">
+                    <button type="button" class="absolute top-4 right-4 text-white" data-collapse-toggle="mobile-menu">
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 2l10 10M12 2 2 12"/>
+                        </svg>
+                        <span class="sr-only">Close menu</span>
+                    </button>
+                    <ul class="flex flex-col space-y-4 text-center">
+                        <li><a href="#" class="text-blue-400 hover:underline">Home</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">Movies</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">French Movies</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">Marvel Movies</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">Hindi Dubbed</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">New Releases</a></li>
+                        <li><a href="#" class="text-blue-400 hover:underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 md:h-96 overflow-hidden rounded-lg">
+            <!-- Carousel items -->
+            <div class="absolute inset-0 w-full h-full" data-carousel-item>
+                <img src="https://i0.wp.com/thenerddaily.com/wp-content/uploads/2024/06/MaXXXine-Everything-You-Need-To-Know-A24-Movie.jpg?resize=770%2C571&ssl=1"
+                     class="w-full h-full object-cover" alt="MaXXXine Movie">
+            </div>
+            <div class="absolute inset-0 w-full h-full" data-carousel-item>
+                <img src="https://www.indiewire.com/wp-content/uploads/2024/07/longlegs_nicolas-cage_jpg_1600x900_crop_q85_jpg_1600x900_crop_q85.webp?w=1600&h=840&crop=1&resize=1536%2C806"
+                     class="w-full h-full object-cover" alt="Longlegs Nicolas Cage">
+            </div>
+            <div class="absolute inset-0 w-full h-full" data-carousel-item>
+                <img src="https://images.thedirect.com/media/article_full/twisters.jpg?imgeng=/cmpr_60/w_1280"
+                     class="w-full h-full object-cover" alt="Twisters Movie">
+            </div>
+            <div class="absolute inset-0 w-full h-full" data-carousel-item>
+                <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/04/josh-hartnett-in-trap-1.jpg"
+                     class="w-full h-full object-cover" alt="Josh Hartnett in Trap">
+            </div>
+            <div class="absolute inset-0 w-full h-full" data-carousel-item>
+                <img src="https://sm.ign.com/t/ign_in/review/d/deadpool-r/deadpool-review_25m7.1280.jpg"
+                     class="w-full h-full object-cover" alt="Deadpool Review">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 bottom-5 left-1/2 transform -translate-x-1/2 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full bg-white" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-1/2 left-0 z-30 flex items-center justify-center h-full px-4 transform -translate-y-1/2" data-carousel-prev>
+            <span class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                <svg class="w-4 h-4 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-1/2 right-0 z-30 flex items-center justify-center h-full px-4 transform -translate-y-1/2" data-carousel-next>
+            <span class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                <svg class="w-4 h-4 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    <section class="hero bg-gray-800 text-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-1 font-bold mb-4">Experience Cinema Like Never Before</h2>
+            <p class="mb-6">Ad Free For Only TechWithSurya Subscribers</p>
+            <a href="#" class="bg-pink-500 text-white py-6 px-6 rounded hover:bg-pink-600 inline-block">Watch All Movies For Free</a>
+        </div>
+    </section>
+
+    <main>
+        <div class="container mx-auto p-4">
+            <!-- Featured Movies Section -->
+            <section class="text-white py-16">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-8">Featured Movies</h2>
+                    <div class="flex flex-wrap -m-4">
+                        <!-- Featured Movie 1 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="Beverly Hills Cop: Axel F" class="object-cover object-center w-full h-full block" src="Beverly-Hills-Cop-Axel-F-7-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">Beverly Hills Cop: Axel F</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Action</li>
+                                    <li>Comedy</li>
+                                    <li>Crime</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$16.00</button>
+                            </div>
+                        </div>
+                        <!-- Featured Movie 2 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="Deadpool Wolverine" class="object-cover object-center w-full h-full block" src="Deadpool-Wolverine-a-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">Deadpool Wolverine</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Action</li>
+                                    <li>Comedy</li>
+                                    <li>Sci-fi</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$18.15</button>
+                            </div>
+                        </div>
+                        <!-- Featured Movie 3 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="Furiosa A Mad Max Saga" class="object-cover object-center w-full h-full block" src="Furiosa-A-Mad-Max-Saga-18-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">Furiosa A Mad Max Saga</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Action</li>
+                                    <li>Adventure</li>
+                                    <li>Sci-fi</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$12.00</button>
+                            </div>
+                        </div>
+                        <!-- Featured Movie 4 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="MaXXXine 2024" class="object-cover object-center w-full h-full block" src="MaXXXine-9-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">MaXXXine 2024</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Crime</li>
+                                    <li>Drama</li>
+                                    <li>Horror</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$16.40</button>
+                            </div>
+                        </div>
+                        <!-- Featured Movie 5 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="The Exorcism" class="object-cover object-center w-full h-full block" src="The-Exorcism-3-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">The Exorcism</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Horror</li>
+                                    <li>Thriller</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$16.00</button>
+                            </div>
+                        </div>
+                        <!-- Featured Movie 6 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="The Fall Guy" class="object-cover object-center w-full h-full block" src="The-Fall-Guy-8-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">The Fall Guy</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Action</li>
+                                    <li>Comedy</li>
+                                    <li>Drama</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$21.15</button>
+                            </div>
+                        </div>
+                        <!-- Featured Movie 7 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="Trap 2024" class="object-cover object-center w-full h-full block" src="Trap-7-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">Trap 2024</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Crime</li>
+                                    <li>Horror</li>
+                                    <li>Mystery</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$12.00</button>
+                            </div>
+                        </div>
+                        <!-- Featured Movie 8 -->
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a class="block relative h-48 rounded overflow-hidden">
+                                <img alt="Twisters 2024" class="object-cover object-center w-full h-full block" src="Twisters-2-700x480.jpg">
+                            </a>
+                            <div class="mt-4">
+                                <h3 class="text-gray-300 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                <h2 class="text-white title-font text-lg font-medium">Twisters 2024</h2>
+                                <ul class="video-index-meta-taxonomy text-gray-400">
+                                    <li>Action</li>
+                                    <li>Adventure</li>
+                                    <li>Thriller</li>
+                                </ul>
+                                <button type="button" class="px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">$18.40</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Free Trial Section -->
+    <section id="free-trial" class="bg-pink-800 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Get a Free Trial</h2>
+            <p class="mb-6">Sign up now to get access to exclusive content and watch the latest movies for free!</p>
+            <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Start Free Trial</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Surya Pratap --- @techwithsurya. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
